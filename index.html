@@ -1,0 +1,1044 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111b2b">
+<title>RumahTangerang | Hunian & Properti Pilihan</title>
+<meta name="description" content="Temukan rumah impian dan tanah kavling terbaik di Tangerang. Pilihan properti mulai dari Rp250 jutaan.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy:#111b2b;
+  --navy2:#1b2b42;
+  --gold:#c9a96e;
+  --gold2:#e6d1a5;
+  --ivory:#f7f6f2;
+  --white:#ffffff;
+  --gray:#858b95;
+  --line:#e9e7e1;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html {scroll-behavior:smooth}
+
+body {
+  font-family:'DM Sans',sans-serif;
+  background:var(--ivory);
+  color:var(--navy);
+}
+
+a {text-decoration:none;color:inherit}
+button,input,select {font:inherit}
+
+.container {
+  width:88%;
+  max-width:1250px;
+  margin:auto;
+}
+
+/* NAVIGATION */
+
+.navbar {
+  height:82px;
+  background:var(--navy);
+  display:flex;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:999;
+  border-bottom:1px solid #ffffff15;
+}
+
+.nav-inner {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo {
+  color:white;
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:-1px;
+}
+
+.logo span {color:var(--gold)}
+
+.nav-menu {
+  display:flex;
+  align-items:center;
+  gap:32px;
+  color:#d5d9e0;
+  font-size:12px;
+}
+
+.nav-menu a:hover {color:var(--gold)}
+
+.nav-btn {
+  background:var(--gold);
+  color:var(--navy);
+  padding:13px 20px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.5px;
+  border-radius:3px;
+}
+
+.menu-toggle {
+  display:none;
+  color:white;
+  background:none;
+  border:0;
+  font-size:25px;
+}
+
+/* HERO */
+
+.hero {
+  min-height:660px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  color:white;
+  background:
+  linear-gradient(90deg,rgba(10,19,32,.94),rgba(10,19,32,.60) 55%,rgba(10,19,32,.15)),
+  url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=90')
+  center/cover;
+}
+
+.hero-content {max-width:720px}
+
+.eyebrow {
+  color:var(--gold2);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:3px;
+  margin-bottom:24px;
+}
+
+.hero h1 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(42px,6vw,76px);
+  font-weight:500;
+  line-height:1.12;
+  margin-bottom:25px;
+}
+
+.hero h1 span {color:var(--gold2)}
+
+.hero-desc {
+  color:#d1d5dd;
+  font-size:15px;
+  line-height:1.9;
+  max-width:530px;
+  margin-bottom:35px;
+}
+
+.hero-actions {
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.btn-primary {
+  background:var(--gold);
+  color:var(--navy);
+  padding:16px 25px;
+  font-size:12px;
+  font-weight:800;
+  border-radius:3px;
+  display:inline-block;
+  transition:.3s;
+}
+
+.btn-primary:hover {
+  background:var(--gold2);
+  transform:translateY(-3px);
+}
+
+.btn-secondary {
+  border:1px solid #ffffff80;
+  color:white;
+  padding:15px 25px;
+  font-size:12px;
+  border-radius:3px;
+  display:inline-block;
+}
+
+.hero-bottom {
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  border-top:1px solid #ffffff30;
+  padding:20px 0;
+}
+
+.hero-bottom-inner {
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.hero-bottom span {
+  font-size:10px;
+  color:#e0e2e6;
+  letter-spacing:1px;
+}
+
+/* INTRO */
+
+.intro {
+  padding:75px 0;
+  background:white;
+}
+
+.intro-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.intro-image {
+  height:390px;
+  position:relative;
+}
+
+.intro-image img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.intro-badge {
+  position:absolute;
+  right:-20px;
+  bottom:25px;
+  background:var(--navy);
+  color:white;
+  padding:22px;
+  width:190px;
+}
+
+.intro-badge strong {
+  display:block;
+  font-family:'Playfair Display',serif;
+  font-size:28px;
+  color:var(--gold);
+}
+
+.intro-badge span {
+  font-size:10px;
+  color:#ddd;
+}
+
+.section-label {
+  color:#ae8950;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2.5px;
+  margin-bottom:15px;
+}
+
+.section-title {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(29px,4vw,43px);
+  font-weight:500;
+  line-height:1.25;
+  margin-bottom:18px;
+}
+
+.section-desc {
+  font-size:13px;
+  color:var(--gray);
+  line-height:2;
+}
+
+/* PROPERTY */
+
+.properties {
+  padding:85px 0;
+}
+
+.section-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:20px;
+  margin-bottom:35px;
+}
+
+.filters {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+}
+
+.filter-btn {
+  padding:11px 19px;
+  border:1px solid #ddd9d0;
+  color:#555e6b;
+  background:transparent;
+  font-size:11px;
+  border-radius:3px;
+  transition:.2s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background:var(--navy);
+  color:white;
+  border-color:var(--navy);
+}
+
+.property-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.property-card {
+  background:white;
+  border:1px solid #eceae4;
+  transition:.3s;
+  overflow:hidden;
+}
+
+.property-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px #111b2b12;
+}
+
+.property-photo {
+  height:235px;
+  position:relative;
+  overflow:hidden;
+}
+
+.property-photo img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.property-card:hover .property-photo img {
+  transform:scale(1.05);
+}
+
+.property-tag {
+  position:absolute;
+  top:15px;
+  left:15px;
+  background:var(--gold);
+  color:var(--navy);
+  font-size:9px;
+  font-weight:800;
+  padding:8px 12px;
+}
+
+.property-info {padding:23px}
+
+.property-location {
+  color:#a27f48;
+  font-size:10px;
+  font-weight:700;
+  margin-bottom:12px;
+  letter-spacing:.5px;
+}
+
+.property-info h3 {
+  font-family:'Playfair Display',serif;
+  font-size:21px;
+  font-weight:600;
+  margin-bottom:12px;
+}
+
+.property-spec {
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  border-bottom:1px solid var(--line);
+  padding-bottom:18px;
+  color:var(--gray);
+  font-size:10px;
+}
+
+.property-price {
+  font-size:20px;
+  font-weight:800;
+  color:var(--navy);
+  margin:19px 0 5px;
+}
+
+.property-price small {
+  font-size:10px;
+  font-weight:500;
+  color:var(--gray);
+}
+
+.property-actions {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+  margin-top:19px;
+}
+
+.detail-btn {
+  background:var(--navy);
+  color:white;
+  text-align:center;
+  padding:13px 5px;
+  font-size:10px;
+  font-weight:700;
+  border:0;
+}
+
+.wa-btn {
+  background:#f0eadc;
+  color:#72582f;
+  text-align:center;
+  padding:13px 5px;
+  font-size:10px;
+  font-weight:700;
+}
+
+.empty {
+  grid-column:1/-1;
+  text-align:center;
+  padding:40px;
+  color:var(--gray);
+}
+
+/* FEATURED */
+
+.featured {
+  padding:80px 0;
+  background:var(--navy);
+  color:white;
+}
+
+.featured-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:55px;
+}
+
+.featured-image {
+  height:420px;
+}
+
+.featured-image img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.featured .section-desc {color:#b9c1cd}
+
+.featured-list {
+  margin-top:27px;
+  display:grid;
+  gap:19px;
+}
+
+.feature-item {
+  display:flex;
+  gap:15px;
+  align-items:center;
+}
+
+.feature-icon {
+  color:var(--gold);
+  font-size:23px;
+}
+
+.feature-item strong {
+  display:block;
+  font-size:13px;
+  margin-bottom:4px;
+}
+
+.feature-item span {
+  color:#aab4c2;
+  font-size:11px;
+}
+
+/* CATEGORIES */
+
+.categories {padding:85px 0}
+
+.category-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:35px;
+}
+
+.category-card {
+  height:310px;
+  position:relative;
+  overflow:hidden;
+  color:white;
+}
+
+.category-card img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.category-card:hover img {transform:scale(1.07)}
+
+.category-card:after {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(0deg,#081321dd,transparent 80%);
+}
+
+.category-text {
+  position:absolute;
+  bottom:25px;
+  left:24px;
+  z-index:2;
+}
+
+.category-text span {
+  font-size:10px;
+  color:var(--gold2);
+  letter-spacing:2px;
+}
+
+.category-text h3 {
+  font-family:'Playfair Display',serif;
+  font-size:25px;
+  margin-top:8px;
+}
+
+/* PROCESS */
+
+.process {
+  padding:80px 0;
+  background:#eeeae0;
+}
+
+.process-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  margin-top:38px;
+}
+
+.process-card {
+  background:white;
+  padding:25px;
+}
+
+.process-number {
+  font-family:'Playfair Display',serif;
+  font-size:34px;
+  color:var(--gold);
+  margin-bottom:20px;
+}
+
+.process-card h3 {
+  font-size:14px;
+  margin-bottom:10px;
+}
+
+.process-card p {
+  color:var(--gray);
+  font-size:11px;
+  line-height:1.8;
+}
+
+/* CTA */
+
+.cta {
+  padding:85px 20px;
+  background:
+  linear-gradient(#101b2be8,#101b2be8),
+  url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85')
+  center/cover;
+  text-align:center;
+  color:white;
+}
+
+.cta h2 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,5vw,48px);
+  font-weight:500;
+  margin-bottom:18px;
+}
+
+.cta p {
+  color:#c4cbd4;
+  font-size:13px;
+  line-height:1.8;
+  margin-bottom:30px;
+}
+
+/* FOOTER */
+
+footer {
+  background:#0b1421;
+  color:white;
+  padding:55px 0 25px;
+}
+
+.footer-grid {
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:40px;
+  margin-bottom:40px;
+}
+
+footer h3 {
+  color:var(--gold);
+  font-size:12px;
+  margin-bottom:20px;
+  letter-spacing:1px;
+}
+
+footer p,footer a {
+  display:block;
+  color:#aab3c0;
+  font-size:11px;
+  line-height:2.2;
+}
+
+.footer-logo {
+  font-size:22px;
+  color:white;
+  font-weight:800;
+  margin-bottom:15px;
+}
+
+.footer-logo span {color:var(--gold)}
+
+.copyright {
+  border-top:1px solid #ffffff20;
+  padding-top:22px;
+  color:#8490a0;
+  font-size:10px;
+  text-align:center;
+}
+
+/* WHATSAPP */
+
+.wa-float {
+  position:fixed;
+  right:22px;
+  bottom:23px;
+  z-index:900;
+  background:#20bd69;
+  color:white;
+  border-radius:50px;
+  padding:15px 21px;
+  font-size:12px;
+  font-weight:800;
+  box-shadow:0 7px 25px #0003;
+}
+
+/* MODAL */
+
+.modal {
+  display:none;
+  position:fixed;
+  inset:0;
+  background:#07101edb;
+  z-index:2000;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+.modal.show {display:flex}
+
+.modal-content {
+  background:white;
+  width:100%;
+  max-width:550px;
+  max-height:90vh;
+  overflow:auto;
+  position:relative;
+}
+
+.modal-content img {
+  width:100%;
+  height:250px;
+  object-fit:cover;
+}
+
+.modal-body {padding:25px}
+
+.modal-close {
+  position:absolute;
+  top:12px;
+  right:12px;
+  background:white;
+  border:0;
+  width:35px;
+  height:35px;
+  font-size:21px;
+  cursor:pointer;
+}
+
+.modal-body h2 {
+  font-family:'Playfair Display',serif;
+  margin:10px 0;
+}
+
+.modal-body p {
+  color:var(--gray);
+  font-size:13px;
+  line-height:1.8;
+}
+
+@media(max-width:900px) {
+  .property-grid {grid-template-columns:repeat(2,1fr)}
+  .intro-grid,.featured-grid {gap:35px}
+  .process-grid {grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:650px) {
+  .container {width:90%}
+  .navbar {height:70px}
+  .nav-menu {
+    display:none;
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:var(--navy);
+    padding:25px 5%;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:23px;
+  }
+  .nav-menu.open {display:flex}
+  .menu-toggle {display:block}
+  .nav-btn {display:none}
+  .hero {min-height:620px;background-position:60%}
+  .hero h1 {font-size:45px}
+  .hero-desc {font-size:13px}
+  .hero-bottom-inner {justify-content:center}
+  .hero-bottom span {font-size:8px}
+  .intro-grid,.featured-grid {grid-template-columns:1fr}
+  .intro-image {height:290px;margin-right:12px}
+  .intro-badge {right:-12px}
+  .section-header {display:block}
+  .property-grid {grid-template-columns:1fr}
+  .property-photo {height:250px}
+  .category-grid {grid-template-columns:1fr}
+  .category-card {height:260px}
+  .process-grid {grid-template-columns:1fr 1fr}
+  .featured-image {height:300px}
+  .footer-grid {grid-template-columns:1fr;gap:30px}
+  .wa-float {right:15px;bottom:15px;padding:13px 17px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+  <div class="container nav-inner">
+
+    <a href="#" class="logo">RUMAH<span>TANGERANG.</span></a>
+
+    <div class="nav-menu" id="navMenu">
+      <a href="#">Beranda</a>
+      <a href="#properti">Properti</a>
+      <a href="#kategori">Kategori</a>
+      <a href="#keunggulan">Keunggulan</a>
+      <a href="#kontak">Hubungi Kami</a>
+    </div>
+
+    <a href="#properti" class="nav-btn">CARI PROPERTI</a>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        PILIHAN PROPERTI TERBAIK DI TANGERANG
+      </div>
+
+      <h1>
+        Temukan Hunian<br>
+        <span>Impian Anda.</span>
+      </h1>
+
+      <p class="hero-desc">
+        Kami menghadirkan pilihan rumah dan tanah kavling
+        dengan beragam lokasi dan harga. Temukan properti
+        yang tepat untuk tempat tinggal maupun investasi masa depan.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#properti" class="btn-primary">
+          JELAJAHI PROPERTI →
+        </a>
+
+        <a href="#kontak" class="btn-secondary">
+          KONSULTASI GRATIS
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="hero-bottom">
+    <div class="container hero-bottom-inner">
+      <span>✦ PILIHAN HUNIAN</span>
+      <span>✦ HARGA MULAI 250 JUTAAN</span>
+      <span>✦ KONSULTASI PROPERTI</span>
+    </div>
+  </div>
+</header>
+
+<!-- INTRO -->
+
+<section class="intro">
+  <div class="container intro-grid">
+
+    <div class="intro-image">
+      <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85" alt="Hunian modern">
+      <div class="intro-badge">
+        <strong>250 Jt+</strong>
+        <span>Pilihan rumah mulai dari 250 jutaan</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">SELAMAT DATANG DI RUMAHTANGERANG</div>
+
+      <h2 class="section-title">
+        Properti Tepat Untuk Masa Depan Yang Lebih Baik.
+      </h2>
+
+      <p class="section-desc">
+        Rumah bukan hanya tempat tinggal, tetapi juga bagian
+        dari perjalanan dan masa depan keluarga Anda.
+        RumahTangerang membantu Anda menemukan pilihan
+        rumah dan tanah kavling sesuai kebutuhan dan anggaran.
+        <br><br>
+        Jelajahi berbagai pilihan properti dan dapatkan
+        informasi langsung dari tim pemasaran kami.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- PROPERTY -->
+
+<section class="properties" id="properti">
+  <div class="container">
+
+    <div class="section-header">
+      <div>
+        <div class="section-label">KOLEKSI PROPERTI</div>
+        <h2 class="section-title">Temukan Properti Pilihan</h2>
+        <p class="section-desc">
+          Berbagai pilihan properti untuk kebutuhan Anda.
+        </p>
+      </div>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" onclick="filterProperty('Semua',this)">Semua Properti</button>
+      <button class="filter-btn" onclick="filterProperty('Rumah',this)">Rumah</button>
+      <button class="filter-btn" onclick="filterProperty('Rumah Kavling',this)">Rumah Kavling</button>
+      <button class="filter-btn" onclick="filterProperty('Tanah Kavling',this)">Tanah Kavling</button>
+    </div>
+
+    <div class="property-grid" id="propertyGrid"></div>
+
+  </div>
+</section>
+
+<!-- FEATURED -->
+
+<section class="featured" id="keunggulan">
+  <div class="container featured-grid">
+
+    <div class="featured-image">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85" alt="Desain rumah modern">
+    </div>
+
+    <div>
+      <div class="section-label">MENGAPA RUMAHTANGERANG</div>
+
+      <h2 class="section-title">
+        Temukan Properti Dengan Lebih Mudah.
+      </h2>
+
+      <p class="section-desc">
+        Kami membantu Anda mengenal berbagai pilihan
+        properti dengan informasi yang jelas dan proses
+        konsultasi yang mudah.
+      </p>
+
+      <div class="featured-list">
+
+        <div class="feature-item">
+          <div class="feature-icon">✦</div>
+          <div>
+            <strong>Pilihan Properti Beragam</strong>
+            <span>Rumah, rumah kavling, dan tanah kavling.</span>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">⌖</div>
+          <div>
+            <strong>Informasi Lokasi</strong>
+            <span>Kenali lokasi dan akses di sekitar properti.</span>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">◇</div>
+          <div>
+            <strong>Konsultasi Langsung</strong>
+            <span>Hubungi tim pemasaran melalui WhatsApp.</span>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">✓</div>
+          <div>
+            <strong>Informasi Transparan</strong>
+            <span>Kenali harga dan spesifikasi sebelum membeli.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+
+<section class="categories" id="kategori">
+  <div class="container">
+
+    <div class="section-label">JELAJAHI KATEGORI</div>
+    <h2 class="section-title">Pilihan Properti Untuk Anda</h2>
+
+    <div class="category-grid">
+
+      <a href="#properti" onclick="selectCategory('Rumah')"
+      class="category-card">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85" alt="Rumah">
+        <div class="category-text">
+          <span>KATEGORI 01</span>
+          <h3>Rumah</h3>
+        </div>
+      </a>
+
+      <a href="#properti" onclick="selectCategory('Rumah Kavling')"
+      class="category-card">
+        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Rumah kavling">
+        <div class="category-text">
+          <span>KATEGORI 02</span>
+          <h3>Rumah Kavling</h3>
+        </div>
+      </a>
+
+      <a href="#properti" onclick="selectCategory('Tanah Kavling')"
+      class="category-card">
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=85" alt="Tanah kavling">
+        <div class="category-text">
+          <span>KATEGORI 03</span>
+          <h3>Tanah Kavling</h3>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+
+<section class="process">
+  <div class="container">
+
+    <div class="section-label">LANGKAH MUDAH</div>
+    <h2 class="section-title">Mulai Perjalanan Properti Anda</h2>
+
+    <div class="process-grid">
+
+      <div class="process-card">
+        <div class="process-number">01</div>
+        <h3>Pilih Properti</h3>
+        <p>Temukan rumah atau tanah sesuai kebutuhan Anda.</p>
+      </div>
+
+      <div class="process-card">
+        <div class="process-number">02</div>
+        <h3>Hubungi Marketing</h3>
+        <p>Dapatkan informasi lengkap mengenai properti pilihan.</p>
+      </div>
+
+      <div class="process-card">
+        <div class="process-number">03</div>
+        <h3>Survei Lokasi</h3>
+        <p>Kunjungi lokasi dan lihat properti secara langsung.</p>
+      </div>
+
+      <div class="process-card">
+        <div class="process-number">04</div>
+        <h3>Wujudkan Impian</h3>
+        <p>Lanjutkan proses pembelian setelah semua informasi sesuai.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+
+<section class="cta" id="kontak">
+  <div class="container">
+
+    <div class="section-label">RUMAHTANGERANG PROPERTY</div>
+
+    <h2>Siap Menemukan Rumah Impian Anda?</h2>
+
+    <p>
+      Konsultasikan kebutuhan properti Anda bersama tim kami.<br>
+      Kami siap membantu menemukan pilihan yang tepat.
+    </p>
+
+    <a href="#" class="btn-primary" onclick="contactWhatsApp('Halo RumahTangerang, saya ingin konsultasi properti.');return false;">
+     
